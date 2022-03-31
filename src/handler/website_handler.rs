@@ -1,6 +1,6 @@
 use std::fs;
 
-use super::http::{HttpHandler, Method, Request, Response, StatusCode};
+use crate::http::{HttpHandler, Method, Request, Response, StatusCode};
 
 pub struct WebsiteHandler {
     public_path: String,

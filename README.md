@@ -1,2 +1,3 @@
 # rust-server-no-lib
-Study project. Rust server with no crates.
+Rust server with no crates.
+Stury project based on Rust book tutorial.

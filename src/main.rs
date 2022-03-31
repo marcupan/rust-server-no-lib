@@ -1,11 +1,11 @@
 use std::env;
 
 use server::Server;
-use website_handler::WebsiteHandler;
 
+mod handler;
 mod http;
 mod server;
-mod website_handler;
+mod thread;
 
 fn main() {
     let default_path = format!("{}/public", env!("CARGO_MANIFEST_DIR"));
@@ -14,5 +14,5 @@ fn main() {
     println!("Public path: {}", public_path);
 
     let server = Server::new("127.0.0.1:8080".to_string());
-    server.run(WebsiteHandler::new(public_path));
+    server.run(public_path);
 }
